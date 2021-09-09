@@ -16,6 +16,14 @@
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
-    <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+    <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Assets\title.ogg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\font.spritefont" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\background.png" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\logo.png" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\monkey.png" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\hit.wav" />
   </ItemGroup>
  </Project>
