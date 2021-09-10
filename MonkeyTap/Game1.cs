@@ -19,11 +19,14 @@ namespace MonkeyTap
         SoundEffect hit;
         Song title;
 
+        List<GridCell> grid = new List<GridCell>();
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            graphics.SupportedOrientations = DisplayOrientation.Portrait;
         }
 
         protected override void Initialize()
@@ -47,6 +50,23 @@ namespace MonkeyTap
             title = Content.Load<Song>("title");
             MediaPlayer.IsRepeating = true;
             MediaPlayer.Play(title);
+
+            //load display stuff
+            var viewport = graphics.GraphicsDevice.Viewport;
+            var padding = (viewport.Width / 100);
+            var gridWidth = (viewport.Width - (padding * 5)) / 4;
+            var gridHeight = gridWidth;
+
+            for (int y = padding; y < gridHeight * 5; y+=gridHeight+padding)
+            {
+                for (int x = padding; x < viewport.Width - gridWidth; x += gridWidth + padding)
+                {
+                    grid.Add(new GridCell()
+                    {
+                        DisplayRectangle = new Rectangle(x, y, gridWidth, gridHeight)
+                    });
+                }
+            }
         }
 
         protected override void Update(GameTime gameTime)
@@ -61,12 +81,17 @@ namespace MonkeyTap
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            graphics.GraphicsDevice.Clear(Color.SaddleBrown);
 
             // TODO: Add your drawing code here
 
             spriteBatch.Begin();
-            spriteBatch.Draw(monkey, Vector2.Zero, null, Color.White);
+
+            foreach (var square in grid)
+            {
+                spriteBatch.Draw(monkey, destinationRectangle: square.DisplayRectangle, color: Color.White);
+            }
+
             spriteBatch.End();
 
             base.Draw(gameTime);
