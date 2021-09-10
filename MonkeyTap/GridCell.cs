@@ -31,7 +31,7 @@ namespace MonkeyTap
 
         public void Reset()
         {
-            Color = Color.Transparent;
+            Color = Color.TransparentBlack;
             CountDown = TimeSpan.FromSeconds(5);
             Transition = 0f;
         }
