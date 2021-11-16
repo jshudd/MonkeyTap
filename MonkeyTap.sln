@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyTap.Android", "Monkey
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyTap.iOS", "MonkeyTap.iOS\MonkeyTap.iOS.csproj", "{BD8ECCD1-6A32-4653-8AA2-0BC0EAFE68F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyTap.GL", "MonkeyTap.GL\MonkeyTap.GL.csproj", "{F02F9B8A-BBCB-463E-9E44-5330F96A9488}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,22 @@ Global
 		{BD8ECCD1-6A32-4653-8AA2-0BC0EAFE68F8}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{BD8ECCD1-6A32-4653-8AA2-0BC0EAFE68F8}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
 		{BD8ECCD1-6A32-4653-8AA2-0BC0EAFE68F8}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Release|iPhone.Build.0 = Release|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{F02F9B8A-BBCB-463E-9E44-5330F96A9488}.AppStore|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
