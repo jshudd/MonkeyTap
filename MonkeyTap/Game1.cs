@@ -93,7 +93,7 @@ namespace MonkeyTap
                 {
                     grid.Add(new GridCell()
                     {
-                        DisplayRectangle = new Rectangle(x, y + 500, gridWidth, gridHeight) //Add 500 pixels to y to lower grid
+                        DisplayRectangle = new Rectangle(x, y + (int)(gridHeight / .5), gridWidth, gridHeight) // Add gridHeight/.5 to y to help center grid; cast to int
                     });
                 }
             }
