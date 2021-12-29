@@ -78,8 +78,8 @@ namespace MonkeyTap
             font = Content.Load<SpriteFont>("font");
             hit = Content.Load<SoundEffect>("hit");
             title = Content.Load<Song>("title");
-            //MediaPlayer.IsRepeating = true;
-            //MediaPlayer.Play(title);
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Play(title);
 
             //load display stuff
             var viewport = graphics.GraphicsDevice.Viewport;
