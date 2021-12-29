@@ -27,4 +27,7 @@
     <None Include="$(MSBuildThisFileDirectory)Assets\monkey.png" />
     <None Include="$(MSBuildThisFileDirectory)Assets\hit.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="$(MSBuildThisFileDirectory)Assets\monkeyIcon.png" />
+  </ItemGroup>
  </Project>
