@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
+using MediaPlayer = Microsoft.Xna.Framework.Media.MediaPlayer;
 
 namespace MonkeyTap
 {
@@ -78,8 +78,8 @@ namespace MonkeyTap
             font = Content.Load<SpriteFont>("font");
             hit = Content.Load<SoundEffect>("hit");
             title = Content.Load<Song>("title");
-            MediaPlayer.IsRepeating = true;
-            MediaPlayer.Play(title);
+            //MediaPlayer.IsRepeating = true;
+            //MediaPlayer.Play(title);
 
             //load display stuff
             var viewport = graphics.GraphicsDevice.Viewport;
@@ -103,9 +103,10 @@ namespace MonkeyTap
         {
             //For mobile, this logic will close the game when the Back button is pressed
             //Exit() is obsolete on iOS
-#if !_IOS_ && !_TVOS_ 
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+#if !_IOS_ && !_TVOS_
+            // commented due to iOS issue
+            //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            //    Exit();
 #endif
             // TODO: Add your update logic here
 

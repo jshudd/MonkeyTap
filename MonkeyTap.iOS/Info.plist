@@ -6,7 +6,7 @@
 	<string>MonkeyTap.iOS</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>GameThumbnail.png</string>
+		<string>monkeyIcon.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>project.MonoGame.MonkeyTap.iOS</string>
@@ -14,8 +14,7 @@
 	<string>7.0</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>CFBundleName</key>
 	<string>MonkeyTap.iOS</string>
