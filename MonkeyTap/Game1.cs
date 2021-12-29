@@ -5,10 +5,13 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
-using MediaPlayer = Microsoft.Xna.Framework.Media.MediaPlayer;
+
 
 namespace MonkeyTap
 {
+    // following line fixes MediaPlayer issues for iOS
+    using MediaPlayer = Microsoft.Xna.Framework.Media.MediaPlayer;
+
     public class Game1 : Game
     {
         private GraphicsDeviceManager graphics;
