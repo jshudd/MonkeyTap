@@ -16,12 +16,12 @@ namespace MonkeyTap
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-        Texture2D monkey;
-        Texture2D background;
-        Texture2D logo;
-        SpriteFont font;
-        SoundEffect hit;
-        Song title;
+        private Texture2D monkey;
+        private Texture2D background;
+        private Texture2D logo;
+        private SpriteFont font;
+        private SoundEffect hit;
+        private Song title;
         
         List<GridCell> grid = new List<GridCell>();
 
