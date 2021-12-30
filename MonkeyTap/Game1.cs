@@ -66,6 +66,15 @@ namespace MonkeyTap
         {
             // TODO: Add your initialization logic here
 
+            // Set window size for OpenGL; add to project instructions & explain            
+            if (GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width > 1300)
+            {
+                graphics.IsFullScreen = false;
+                graphics.PreferredBackBufferWidth = 512; // width of background image
+                graphics.PreferredBackBufferHeight = 1024; // height of background image
+                graphics.ApplyChanges();
+            }
+
             base.Initialize();
         }
 
