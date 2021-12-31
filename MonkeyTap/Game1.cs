@@ -245,7 +245,8 @@ namespace MonkeyTap
 
             for (int i = 0; i < grid.Count; i++)
             {
-                if(grid[i].DisplayRectangle.Contains(mousePoint) && grid[i].Color == Color.White)
+                //if mouse is over a revealed Monkey && mouse is clicked, Monkey gets caught
+                if(grid[i].DisplayRectangle.Contains(mousePoint) && mouseState.LeftButton == ButtonState.Pressed && grid[i].Color == Color.White)
                 {
                     hit.Play();
                     grid[i].Reset();
