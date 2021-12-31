@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
-
+using Microsoft.Xna.Framework.Input;
 
 namespace MonkeyTap
 {
@@ -124,10 +124,14 @@ namespace MonkeyTap
 
             //Custom logic
             var touchState = TouchPanel.GetState();
+            //mouse input
+            var mouseState = Mouse.GetState();
+            var mousePoint = new Point(mouseState.X, mouseState.Y);
+
             switch (currentState)
             {
                 case GameState.Start:
-                    if (touchState.Count > 0)
+                    if (touchState.Count > 0 || mouseState.LeftButton == ButtonState.Pressed) // Starts game if touched or mouse clicked
                     {
                         currentState = GameState.Playing;
                     }
