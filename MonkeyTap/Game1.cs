@@ -137,7 +137,7 @@ namespace MonkeyTap
                     }
                     break;
                 case GameState.Playing:
-                    PlayGame(gameTime, touchState);
+                    PlayGame(gameTime, touchState, mouseState);
                     break;
                 case GameState.GameOver:
                     tapToRestartTimer -= gameTime.ElapsedGameTime;
@@ -239,6 +239,21 @@ namespace MonkeyTap
             }
         }
 
+        void ProcessMouse(MouseState mouseState)
+        {
+            var mousePoint = new Point(mouseState.X, mouseState.Y);
+
+            for (int i = 0; i < grid.Count; i++)
+            {
+                if(grid[i].DisplayRectangle.Contains(mousePoint) && grid[i].Color == Color.White)
+                {
+                    hit.Play();
+                    grid[i].Reset();
+                    score += 1;
+                }
+            }
+        }
+
         void CheckForGameOver(GameTime gameTime)
         {
             for (int i = 0; i < grid.Count; i++)
@@ -285,9 +300,10 @@ namespace MonkeyTap
             }
         }
 
-        void PlayGame(GameTime gameTime, TouchCollection touchState)
+        void PlayGame(GameTime gameTime, TouchCollection touchState, MouseState mouseState)
         {
             ProcessTouches(touchState);
+            ProcessMouse(mouseState);
             CheckForGameOver(gameTime);
             CalculateCellsToChange(gameTime);
             MakeMonkeyVisible();
